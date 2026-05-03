@@ -4,20 +4,15 @@
 
 # aurekai-mlflow
 
-Aurekai integration surface for Mlflow.
+Aurekai integration surface for MLflow with local-file experiment tracking for manifests, model memory, SAE audits, semantic cache benchmarks, proof bundles, and release gates.
 
-Status: planned
-Type: data
+Status: active
+Type: data-ml
 
-## Core Template Set
+## Quick Start
 
-- doctor-deep
-- manifest-verify
-- model-memory-pack
-- sae-audit
-- semantic-cache-bench
-- proof-bundle-export
-- release-gate
+python3 -m pip install -r requirements.txt
+bash tests/validate-scripts.sh
 
 ## Canonical References
 

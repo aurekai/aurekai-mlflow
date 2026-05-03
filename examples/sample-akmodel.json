@@ -1,0 +1,5 @@
+{
+  "name": "sample-model",
+  "ext": ".akmodel",
+  "operator_id": "akai_run_operator"
+}
