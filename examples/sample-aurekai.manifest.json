@@ -1,0 +1,6 @@
+{
+  "schema_version": "aurekai.deploy.v1",
+  "name": "aurekai",
+  "version": "0.8.0-alpha.4",
+  "operator_count": 89
+}

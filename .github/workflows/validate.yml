@@ -6,11 +6,24 @@ on:
     branches: [ main ]
 
 jobs:
-  readme:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Ensure scaffold files exist
+
+      - name: Ensure required files exist
         run: |
           test -f README.md
           test -f LICENSE
+          test -f .release-versions.env
+          test -f requirements.txt
+          test -f scripts/run_pipeline.py
+          test -f tests/validate-scripts.sh
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
+
+      - name: Validate scripts
+        run: bash tests/validate-scripts.sh
